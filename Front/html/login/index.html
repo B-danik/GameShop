@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <title>Form Input Wave</title>
+  </head>
+  <body>
+
+<div class="container">
+  <h1>Войти</h1>
+    <form method="post" onsubmit="loginUser(this); return false;">
+      <input type="hidden" id="address" name="adress" value="{server}">
+    <div class="form-control">
+      <input id="email" name="username" type="text" required />
+      <label>Email</label>
+    </div>
+    <div class="form-control">
+      <input id="pass" name="password" type="password" required />
+      <label>Пароль</label>
+    </div>
+    <button class="btn" >Авторизоваться</button>
+    <p class="text">
+      Нет учетной записи? <a href="">Регистрация</a></p>
+  </form>
+</div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

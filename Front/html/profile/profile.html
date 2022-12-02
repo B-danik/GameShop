@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam</title> 
+    <link rel="stylesheet" type="text/css" href="profile.css"> 
+    <body>
+        <div style="  position: relative;
+        width: auto;
+        height: 50px;
+        background-color: #34495e;
+        border-radius: 8px;
+        font-size: 0;
+       ">
+          <a style=" width: 100px;" v-if="active_page===0" href="../page/page.html">Main</a>
+          <a style=" width: 110px;" v-if="active_page===1" href="#">Shop</a>
+          <a style=" width: 100px;" v-if="active_page===2" href="#">Library</a>
+          <a style=" width: 160px;" v-if="active_page===3" href="../profile/profile.html">My profile</a>
+          <a style=" width: 120px;"  href="../login/index.html">Exit</a>     
+          <div class="animation start-home"></div>   
+        </div>   
+        <div style="margin-top: 20%; margin-left: 25%" class="container">
+            <div class="card">
+              <div class="face face1">
+                <div class="content">
+                  <i class="fab fa-windows"></i>
+                  <h3>Windows</h3>
+                </div>  
+              </div>
+              <div class="face face2">
+                <div class="content">
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic
+                    cum ratione a.</p>
+                  <a style="color :black" href="#" type="button">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="face face1">
+                <div class="content">
+                  <i class="fab fa-android"></i>
+                  <h3>Android</h3>
+                </div>
+              </div>
+              <div class="face face2">
+                <div class="content">
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic
+                    cum ratione a.</p>
+                  <a style="color :black" href="#" type="button">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="face face1">
+                <div class="content">
+                  <i class="fab fa-apple"></i>
+                  <h3>Apple</h3>
+                </div>
+              </div>
+              <div class="face face2">
+                <div class="content">
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic
+                    cum ratione a.</p>
+                  <a style="color :black" href="#" type="button">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
+       
+    </body>
+</header>
+</html>
