@@ -1,5 +1,5 @@
 const labels = document.querySelectorAll(".form-control label");
-const url = 'http://localhost:3001'
+const url = 'http://localhost:3002/users'
 
 
 labels.forEach((label) => {
@@ -12,19 +12,10 @@ labels.forEach((label) => {
     .join("");
 });
 
-async function test(form)
-{
-   const check = await user.check_user(form.username.value,form.password.value);
-   if(check === 0)
-   {
-    console.log('try');
-   }
-}
-
-
 const loginUser = async function(form){
   try {       
     const response = await fetch(url + '/login', {
+      mode: 'no-cors',
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
@@ -36,6 +27,15 @@ const loginUser = async function(form){
   });
   const data = await response.json()
   console.log(date)
+  if (data.result === 'SUCCESS') {
+    window.location.href = '/user/' + data.id +
+        '/user_name/' + data.name +
+        '/login/' + data.login +
+        '/isadmin/' + data.isadmin
+    ;
+} else {
+    $.notify('Ошибка входа (message: ' + data.message + ').', "error");
+}
   }catch(e)
   {
     $.notify('Ошибка входа (message: ' + e + ').', "error");

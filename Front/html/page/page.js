@@ -1,19 +1,3 @@
-//menu
-var app_main_menu = new Vue({
-    el: '#menu',
-    data: {
-        active_page: -1
-    },
-    methods: {},
-    mounted() {
-        if (document.title.includes("Home")) { this.active_page = 0 };
-        if (document.title.includes("About")) { this.active_page = 1 };
-        if (document.title.includes("Blog")) { this.active_page = 2 };
-        if (document.title.includes("Portefolio")) { this.active_page = 3 };      
-        if (document.title.includes("Exit")) { this.active_page = 4 };    
-        if (document.title.includes("Exit")) { this.active_page = 5 };      
-    }
-})
 const slider = document.querySelector(".items");
 	const slides = document.querySelectorAll(".item");
 	const button = document.querySelectorAll(".button");
