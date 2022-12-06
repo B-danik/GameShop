@@ -1,5 +1,5 @@
 const labels = document.querySelectorAll(".form-control label");
-const url = 'http://localhost:3002/users'
+const url = 'http://localhost:3001';
 
 
 labels.forEach((label) => {
@@ -15,7 +15,6 @@ labels.forEach((label) => {
 const loginUser = async function(form){
   try {       
     const response = await fetch(url + '/login', {
-      mode: 'no-cors',
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
